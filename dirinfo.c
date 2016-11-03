@@ -71,9 +71,9 @@ int main () {
 	closedir(dirstream);
 
 	printf("\n");
-	printf("Total File Size: %d Bytes\n", totalsize);
+	printf("Total Regular File Size: %d Bytes\n", totalsize);
 	printf("Directories:\n");
 	printf("%s\n", dirs);
-	printf("Files:\n");
+	printf("Regular Files:\n");
 	printf("%s\n", regFiles);
 }
