@@ -60,6 +60,9 @@ int main () {
 	DIR* dirstream = opendir(dirname);
 	if(dirstream == NULL) printf("Error in Opening Directory: %s\n", strerror(errno));
 
+	printf("\n======================================================\n");
+	printf("Statistics for directory: %s\n", dirname);
+
 	//null-terminate
 	dirs[0] = 0;
 	regFiles[0] = 0;
@@ -67,8 +70,7 @@ int main () {
 	int totalsize = printinfo(dirstream, dirname);
 	closedir(dirstream);
 
-	printf("\n======================================================\n");
-	printf("Statistics for directory: %s\n", dirname);
+	printf("\n");
 	printf("Total File Size: %d Bytes\n", totalsize);
 	printf("Directories:\n");
 	printf("%s\n", dirs);
